@@ -1,0 +1,1369 @@
+.dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  }
+  
+  .navbar-nav li:hover > ul.dropdown-menu {
+      display: block;
+  }
+      
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+#suggestions {
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2);
+    height: auto;
+    position: absolute;
+    top: 45px;
+    z-index: 9999;
+    width: 206px;
+}
+
+#suggestions .suggest-element {
+    background-color: #EEEEEE;
+    border-top: 1px solid #d6d4d4;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+
+#suggestions .suggest-title {
+    background-color: white;
+    border-top: 1px solid #d6d4d4;
+    padding: 8px;
+    width: 100%;
+    float: left;
+}
+
+@media (max-width: 991px) {
+
+
+    #suggestions {
+        bottom: 0px;
+        width: 85%;
+
+    }
+
+    #suggestions .suggest-element {
+        border-left: 1px solid #d6d4d4;
+        border-right: 1px solid #d6d4d4;
+    }
+    
+    #suggestions .suggest-title {
+        border-left: 1px solid #d6d4d4;
+        border-right: 1px solid #d6d4d4;
+    }
+
+}
+
+                        /* CSS PLAYER*/
+    
+.name h1 { text-transform: uppercase; }
+
+.name h2 { 
+    text-transform: uppercase; 
+    font-size: 1em; 
+}
+
+#playerSection {padding: 0 5% 0 5%;}
+
+.top {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.bottom, .bottom_pro {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.description { float: left; }
+
+.name { float:left; }
+
+.name h2 a {
+    text-decoration:none;
+    color: black;
+}
+
+.name h2 a:hover {
+    text-decoration:none;
+    color: black;
+}
+
+.miscellany, .rating, .stats {
+    font-size: 0.8em;
+}
+
+.bi-star { float: left; }
+
+.stats {
+    text-align: center;
+}
+
+.stats span {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.skill-ratings {
+    float: left;
+    width:30%;
+    min-width: 500px;
+    margin-right: 5%;
+}
+
+.mr-2 {
+    margin: 0 auto;
+    margin-bottom: 1%;
+}
+
+.mr-2 .row .col-md button{
+    width: 100%;
+    height: 100%;
+}
+
+#statistics{
+    margin-top: 1%;
+}
+
+.rat span {
+    font-size: 2em;
+    font-weight: bolder;
+    line-height: 85%;
+}
+
+.rat {
+    width: 133px;
+    margin-bottom: 5%;
+}
+
+.bloq2, .bloq4 {
+    float:left;
+    margin-right: 5%;
+    min-width: 500px;
+    width: 30%;
+}
+
+.bloq3, .bloq5 {
+    float:left;
+    min-width: 500px;
+    width: 30%;
+}
+
+.bests { margin-top: 5%; }
+
+#FloorRate, #BallActions {
+    max-width: 100%;
+    margin: auto;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.personality {
+    float: left;
+    width:30%;
+    min-width: 500px;
+    margin-right: 5%;
+}
+
+.per { text-align: center; }
+
+#playoffStats{
+    display: none;
+}
+
+.oneline { 
+    text-align: center;
+    white-space: nowrap; }
+
+@media (max-width: 1870px) {
+
+    .skill-ratings {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+
+    .bloq2, .bloq3{
+        width: 100%;;
+        float: none;
+        clear: both;
+        margin: 0 auto;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+
+    #FloorRate, #BallActions {
+        height: 400px;
+        margin: 0 auto;
+        float: left;
+    }
+
+}
+
+@media (max-width: 1260px) {
+
+    .personality {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+
+    .bloq4, .bloq5{
+        width: 100%;;
+        float: none;
+        clear: both;
+        margin: 0 auto;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+
+}
+
+                        /* CSS TEAM*/
+
+table.teamTop{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    color: white;
+}
+
+.playersRoster{
+    width:95%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.cardPlayer{
+    float:left;
+    width: 200px;
+    font-size: 0.6rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .cardPlayer{
+        width: 50%;
+    }
+  }
+
+.playerPhotoTeamPage{
+    height:75px;
+}
+
+.photoDiv{
+    height:80px;
+}
+
+.imgPlayer{
+    float:left;
+}
+
+.playerNameDiv{
+    margin-top: 12px;
+}
+
+.teamBottom{
+    margin: 2% 5% 5% 2%;
+    width: 98%;
+    clear:left;
+    float:left;
+}
+
+.mediaNews{
+    width: 300px;
+    float:left;
+    margin-right: 5%;
+}
+
+.mediaNewsTable{
+    width: 18rem;
+    height: 725px;
+}
+
+.dateNews{
+    margin-left: 18px;
+    font-size: 0.8rem;
+}
+
+.part2, .part3{
+    width: 33%;
+    margin-right: 5%;
+    float: left;
+}
+
+@media (max-width: 1700px) {
+    .part2, .part3{
+        width: 30%;
+        margin-right: 5%;
+        float: left;
+    }
+  }
+
+@media (max-width: 1300px) {
+    .part2, .part3{
+        width: 27%;
+        margin-right: 5%;
+        float: left;
+    }
+  }
+
+  @media (max-width: 1050px) {
+
+    .mediaNews{
+        width: 100%;
+        margin-bottom: 5%;
+        
+    }
+
+    .mediaNewsTable{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .part2, .part3{
+        width: 100%;
+        margin-right: 5%;
+        float: left;
+    }
+  }
+
+#teamBio, #teamShooting, #teamAdvanced, #teamMiscellaneous, #teamBasicTotal, #teamBasic36, #teamAdvanced36, #teamMiscellaneousTotal{
+    display: none;
+}
+
+#teamBio, #teamRatings, #teamBasic, #teamShooting, #teamAdvanced, #teamMiscellaneous, #teamBasicTotal, #teamBasic36, #teamAdvanced36, #teamMiscellaneousTotal {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+#teamContracts #cut{
+    background-color: #CCCCCC;
+}
+
+#teamContracts #total{
+    background-color: #999999;
+}
+
+.contractsKey{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.dnp{
+    text-align: center;
+}
+
+#score{
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.score{
+    width: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.score-title{
+    text-align: center;
+    font-weight: normal;
+}
+
+td.score-title a {
+    color: black;
+}
+
+td.score-title a:hover{
+    color: grey;
+}
+
+.scoreLeftSide{
+    background-position: center left;
+    text-align: right;
+    font-size: 1.5em;
+}
+
+.scoreRightSide{
+    background-position: center right;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.scoreLeftSide, .scoreRightSide{
+    height: 120px;
+    background-repeat: no-repeat;
+    width:50%;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+@media (max-width: 1600px) {
+
+    .scoreLeftSide, .scoreRightSide{
+        text-align: center;
+        background-image: none !important;
+    }
+  }
+  
+@media (max-width: 800px) {
+
+    .scoreLeftSide, .scoreRightSide{
+       font-size: 75%;
+    }
+
+    #score{
+        width: 730px;
+        margin: 0 auto;
+    }
+  } 
+
+h1.team{
+    font-size: 1em;
+}
+
+.gameBottom{
+    width: 1125px;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+
+.mvp h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mvp h2{
+    margin-bottom: 0.1%;
+}
+
+.mvp h2, .mvp h3{
+    font-size: 1.25rem;
+}
+
+.mvpPhoto{
+    float: left;
+}
+
+.dayStats{
+    width: 500px;
+}
+
+@media (min-width: 1126px) {
+
+    .gameBottom{
+        display: flex;
+        align-items: center; 
+    }
+
+}
+
+@media (max-width: 1125px) {
+
+    .gameBottom{
+        width: 100%;
+    }
+
+    .mvp{
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
+
+    .dayStats{
+        width: 100%;
+    } 
+}
+
+.coachInfo{
+    margin-bottom: 2%;
+}
+
+#spider, .coachPhi, .coachHis{
+    width: 28%;
+    float: left;
+    margin: 1.5% 5% 1.5% 0;
+}
+
+.coachPhi .container .row span, .container .row .little span{ 
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container .row .little span{
+    font-size: 0.7em;
+}
+
+.container .row .little{ 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.coachPhi .container .w-100{
+    margin-bottom: 20px;
+}
+
+td.nodata{
+    text-align: center;
+}
+
+@media (max-width: 1840px) {
+
+    #spider{
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .coachInfo{
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    .coachPhi, .coachHis{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+}
+
+@media (max-width: 970px) {
+
+    .coachInfo{
+        width: 100%;
+    }
+
+    .coachPhi, .coachHis{
+        margin: 1% 0 1% 0;
+        width: 100%;
+    }
+    
+}
+
+.card-group{
+    clear: both;
+    margin-top: 2%;
+}
+
+.teamInfoDiv{
+    margin-right: 5%;
+}
+
+td.teamLogoTable{
+    text-align: center;
+}
+
+@media (max-width: 1080px) {
+
+    .teamInfoDiv{
+        display: none;
+    }
+
+    .teamInfoDiv.Important{
+        display: block;
+    }
+    
+}
+
+div.row.row-cols-1.row-cols-md-5.g-4{
+    clear: both;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+span.cardTeamStaff{
+    margin-left: 10px;
+}
+
+.container.teamInsights{
+    clear: both;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: sub;
+}
+
+.container.teamInsights .row .col span{
+    font-size: 2.5rem;
+    vertical-align: sub;
+}
+
+.teamInfo1{
+    clear: both;
+}
+
+.teamInfo1, .teamInfo2, .teamInfo3{
+    width: 30%;
+    margin: 2% 2% 2% 2%; 
+    float: left;
+}
+
+.teamInfo1{
+    margin-left: 0%;
+}
+
+.teamInfo3{
+    margin-right: 0%;
+}
+
+.owner, .teamHistory, .teamInformation, div.retired{
+    margin-bottom: 5%;
+}
+
+.owner .container .row, .teamHistory .container .row{
+    text-align: center;
+}
+
+.owner .container .row .col-sm.ownerName{
+    display: flex;
+    align-items: center;
+}
+
+.owner .container .row .col-sm img{
+    margin-bottom: 10%;
+}
+
+.teamHistory .container .row .col-sm span{
+    font-size: 2.5rem;
+    vertical-align: sub;
+}
+
+.teamGraphs .container .row{
+    margin-bottom: 20px;
+}
+
+.teamGraphs .container .row .col-sm.colors{
+    display: flex;
+    align-items: center;
+}
+
+#myCanvas, #myCanvas2{
+    margin-left: 30px;
+}
+
+.championships span, .teamInformation span{
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.teamInformation .container .row{
+    margin-bottom: 20px;
+}
+
+span.retired {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+
+    color: white;
+    text-align: center;
+
+    font: 20px Arial, sans-serif;
+    float: left;
+
+    font-weight: bold;
+    margin: 3px;
+}
+
+.ta2, .ta3, .ta4, .ta5, .ta6, .ta7, .ta8, .ta9, .ta10, .ta11, .ta12{
+    display: none;
+}
+
+.teamAwards{
+    max-height: 250px;
+    overflow-y: auto;
+    width: 75%;
+    margin-top: 20%;
+}
+
+select[name="teamAwards"]{
+    float: left; 
+    width:75%
+} 
+
+#awardPhoto{
+    float: right;
+}
+
+@media (max-width: 1525px) {
+
+    #awardPhoto{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 1080px) {
+
+    .teamInfo0{
+        width: 100%;
+    }
+
+    .teamInfo1, .teamInfo2, .teamInfo3{
+        float: none;
+        width: 100%;
+        margin: 0%;        
+    }
+
+    .championships, .teamGraphs{
+        margin-bottom: 5%;
+    }
+    
+}
+
+.stats2 {
+    font-size: 1em;
+    text-align: center;
+}
+
+.stats2 span {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+
+.formerPlayerIMG{
+    text-align: center;
+}
+
+.retiredStats, .retiredAwards{
+    float: left;
+}
+
+.retiredStats{
+    clear: both;
+    width: 67.5%;
+    overflow-x: auto;
+    margin-right: 2.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    max-height: 550px;
+}
+
+.retiredAwards{
+    width: 27.5%;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    overflow-y: auto;
+    height: 550px;
+}
+
+@media (max-width: 1080px) {
+
+    .retiredStats, .retiredAwards{
+        float:none;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        margin-bottom: 2%;
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+
+    .retiredStats{
+        margin-top: 3%;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    h1#formerPlayer{
+        text-align: center;
+    }
+    
+}
+
+.topLeaders{
+    margin-top: 1%;
+}
+
+.leaderCards{
+    clear: both;
+    float: left;
+    width: 30%;
+    margin-top: 1%;
+}
+
+.leaderStats{
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    max-height: 870px;
+    overflow-y: auto;
+}
+
+.leaderCards img, .playerSearch img, img.trophyPhoto, img.teamDraftLogo, img.injuryLogo{
+    margin-right: 10px;
+}
+
+.leaderCards .card-title{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.leaderCards .card-title, .leaderCards .card-subtitle, .leaderCards .card-text{
+    text-align: center;
+}
+
+.leaderCards .card-text{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.leadersToggleButtons{
+    float: left;
+}
+
+.leadersToggleButtons .part1{
+    margin-bottom: 5%;
+}
+
+@media (max-width: 850px) {
+
+    .leaderStats{
+        max-height: 1120px;
+    }
+
+    .leaderCards{
+        margin-top: 5%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .leaderStats{
+        width: 100%;
+        height: 100%;
+    }
+
+    .leaderCards{
+        display:none
+    }
+    
+}
+
+.container.milestones .row .col-xl{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+table.milestones tbody tr{
+    font-size: 0.8rem;
+}
+
+table.milestones tr.headMil{
+    background-color: lightgrey;
+}
+
+.container.milestones .row .col-xl{
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.form-select.transactionsSelect{
+    width: 45%;
+    float: left;
+}
+
+.form-select.transactionsSelect:nth-of-type(1){
+    margin-right: 5%;
+}
+
+.form-select.transactionsSelect:nth-of-type(2){
+    margin-left: 5%;
+}
+
+.btn.btn-outline-primary{
+    width: 16%;
+}
+
+.form-select.league.Standings{
+    width: 48%;
+    float: left;
+    margin: 2% 1% 2% 1%;
+}
+
+.btn-group.standings{
+    width: 48%;
+    margin: 2% 1% 2% 1%;
+}
+
+table thead.thead tr th, table.table.oneline thead.thead tr th {
+    background-color: white;
+  }
+
+table.sortable thead.thead tr th {
+    cursor: pointer;
+}
+
+.form-select.league.PastStandings {
+    width: 23%;
+    float: left;
+    margin: 2% 1% 2% 1%;
+}
+
+.form-select.league.PastYear {
+    width: 23%;
+    float: left;
+    margin: 2% 1% 2% 1%;
+}
+
+td.negative{
+    color: red;
+}
+
+th.media.Team{
+    color: white;
+}
+
+th.free.Agent{
+    background-color: black;
+}
+
+h2.search{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+tr.rookieInfo, tr.playerInfo{
+    vertical-align: middle;
+}
+
+.btn.btn-primary.rookieguide, .btn.btn-primary.fantasyguide{
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+header{
+    width: 100%;
+}
+
+footer { 
+    width: 100%;
+    clear: left; 
+}
+
+body{
+    width: 100%;
+}
+
+nav{
+    width: 100%;
+}
+
+span.short{
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    span.long{
+        display: none;
+    }
+
+    span.short{
+        display: block;
+    }
+    
+}
+
+.container.teamHistory, .form-select.coachRecords, .form-select.playerRecords {
+    margin-bottom: 2%;
+}
+
+.marginPlayerList{
+    padding-right: 10px;
+}
+
+.col-md.playerList, .col-lg.leagueLeaders{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@media (max-width: 992px) {
+
+.playerPortrait, .teamPortrait{
+    display: none;
+    }
+}
+
+section#seasonPrev{
+    height: 1165px;
+}
+
+.seasonPrevButtons{
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#easternButton{
+    background-color: blue;
+}
+
+#westernButton{
+    background-color: red;
+}
+
+.btn.btn-secondary.seasonPrev{
+    width: 100%;
+    height: 100%;
+}
+
+.seasonPrevTitle{
+    display: flex;
+    align-items: center;
+    border-top: 1px lightgray solid;
+    border-bottom: 1px lightgray solid;
+    margin-bottom: 1%;
+}
+
+.seasonPrevTitle h2{
+    margin-left: 1%;
+}
+
+.seasonPrevTeams{
+    margin-left: 5%;
+}
+
+.seasonPrevInfo{
+    margin-left: 2%;
+    float:left;
+}
+
+.seasonPrevInfo1, .seasonPrevInfo2{
+    width: 400px;
+    margin-bottom: 3%;
+    float:none;
+}
+  
+table.seasonPrevInfo1 tr td, table.seasonPrevInfo2 tr td{
+    padding-bottom: 4%;
+}
+
+.divtable{
+    width: 400px;
+    padding-bottom: 4%;
+}
+
+.court{
+    width: 1085px;
+    height: 750px;
+    float: right;
+}
+
+.projected h3{
+    margin-bottom: 0px;
+}
+
+h3.h3Center{
+    text-align: center;
+}
+
+@media (max-width: 1570px) {
+
+    section#seasonPrev{
+        height: fit-content;
+    }
+
+    .seasonPrevInfo{
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 1%;
+    }
+
+    .court{
+        clear: both;
+        float: none;
+        margin: 0 auto;
+        margin-top: 30%;
+    }
+
+    .seasonPrevInfo1{
+        float: left;
+        margin-left: 10%;
+    }
+
+    .seasonPrevInfo2{
+        float: right;
+        margin-right: 10%;
+    }
+
+}
+
+@media (max-width: 1115px) {
+
+    section#seasonPrev{
+        height: auto;
+        width: 100%;
+    }
+    
+    .seasonPrevInfo1, .seasonPrevInfo2{
+        width: 70%;
+        float:none;
+        margin: 0 auto;
+        margin-bottom: 4%;
+    }
+    
+    .divtable{
+        width: 100%;
+    }
+
+    .court{
+        margin-top: -3%;
+        width: 100%;
+        height: auto;
+    }
+
+    .projectedPlayers{
+        background-image: none;
+        margin: 0 auto;
+    }
+
+}
+
+.projected h2{
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.projectedPlayers span{
+    background-color: white;
+    font-size: 2em;
+    vertical-align: sub;
+}
+
+img.playerCourt{
+    max-width: 150px;
+}
+
+.playerSP{
+    width:100%;
+}
+
+.playerTitle{
+    width:100%;
+}
+
+.white{
+    background-color: white;
+    color: black;
+    font-size: 0.85em;
+}
+
+.projectedP1, .projectedP2, .projectedP3, .projectedP4, .projectedP5{
+    width: 190px;
+}
+
+.projectedP1{
+    position: relative;
+    left: 55%;
+    bottom: 250px;
+}
+
+.projectedP2{
+    position: relative;
+    left: 20%;
+    bottom: 100px;
+}
+
+.projectedP3{
+    position: relative;
+    left: 72.5%;
+    bottom: 10px;
+}
+
+.projectedP4{
+    position: relative;
+    left: 16.5%;
+    top: -100px;
+}
+
+.projectedP5{
+    position: relative;
+    left: 55%;
+    top: 90px;
+}
+
+@media (max-width: 1085px) {
+
+    .projectedP1, .projectedP2, .projectedP3, .projectedP4, .projectedP5 {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        float: left;
+        margin: 0 auto;
+        margin-left: 0.75%;
+    }
+
+    .projectedP1, .projectedP2 {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        float:left;
+    }
+
+    .projectedP2 {
+        clear: both;
+
+    }
+
+}
+
+section.normal{
+    padding: 1%
+}
+
+div.normal{
+    padding: 1%
+}
+
+tr{
+    vertical-align: middle;
+}
+
+h2#h2Staff{
+    padding: 1%;
+}
+
+.mainTitle{
+    font-size: 2.5rem;
+}
+
+.d-flex.flex-column.player-types, .row.player-types{
+    margin-bottom: 5%;
+}
+
+.fa-solid {
+    opacity: 0.1;
+}
+
+.fa-solid.black {
+    opacity: 1;
+    margin-right: 10%;
+}
+
+img.scheduleLogo, img.teamLogoList{
+    margin-right: 10px;
+    width: 16px;
+}
+
+.embed-youtube {
+    position: relative;
+    padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
+    /* padding-bottom: 62.5%; - 16:10 aspect ratio */
+    /* padding-bottom: 75%; - 4:3 aspect ratio */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.embed-youtube iframe,
+.embed-youtube object,
+.embed-youtube embed {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.col.playerHistoryLogo{
+    text-align: center;
+}
