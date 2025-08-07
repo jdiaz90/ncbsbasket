@@ -6,7 +6,8 @@ use App\Models\BoxScore;
 use App\Models\Player;
 use App\Models\Team;
 use ErrorException;
-use Goutte\Client;
+use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\BrowserKit\HttpBrowser;
 use Illuminate\Support\Collection;
 
 class FreeAgencyGuideController extends Controller
@@ -186,7 +187,7 @@ class FreeAgencyGuideController extends Controller
         ->where("TeamID", "<=", "30")
         ->get();
 
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         
         $ids = new Collection;
 

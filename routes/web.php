@@ -107,6 +107,9 @@ Route::resource('medianews', 'App\Http\Controllers\MediaNewController');
 
 Route::resource('search', 'App\Http\Controllers\SearchController');
 
+use App\Http\Controllers\SearchController;
+Route::post('/search/suggest', [SearchController::class, 'suggest']);
+
 Route::resource('playersearch', 'App\Http\Controllers\PlayerSearchController');
 
 Route::resource('coachsearch', 'App\Http\Controllers\CoachSearchController');

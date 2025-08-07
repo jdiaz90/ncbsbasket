@@ -3,7 +3,8 @@
 namespace App\Models;
 
 use ErrorException;
-use Goutte\Client;
+use Symfony\Component\BrowserKit\HttpBrowser;
+use Symfony\Component\HttpClient\HttpClient;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
@@ -945,35 +946,35 @@ class Team extends Model
     }
 
     function getHTMLTeamInfo(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/" . $this->TeamAbbrev . "" 
         . $this->TeamName. "_Info.html");  
     }
 
     function getHTMLTeamStats(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/" . $this->TeamAbbrev . "" 
         . $this->TeamName. "_Stats.html");  
     }
 
     function getHTMLTeamRatings(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/" . $this->TeamAbbrev . "" 
         . $this->TeamName. "_Ratings.html");  
     }
 
     function getHTMLTeamDepth(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/" . $this->TeamAbbrev . "" 
         . $this->TeamName. "_Depth.html");  
     }
 
     function getHTMLTeamSchedule(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/" . $this->TeamAbbrev . "" 
         . $this->TeamName. "_Schedule.html");  

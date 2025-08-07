@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="title" content="@yield('title')">
     <meta name="description" content="@yield('description')">    
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/CSS.css">
     <link rel="stylesheet" type="text/css" href="/css/Teams.css"> 
@@ -11,28 +12,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/d5173ee537.js" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function() {
-            $('#key').on('keyup', function() {
-                var key = $(this).val();		
-                var dataString = 'key='+key;
+    $(document).ready(function() {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $('#key').on('keyup', function() {
+            var key = $(this).val();        
+            var dataString = { key: key };
+
             $.ajax({
-                    type: "POST",
-                    url: "/php/NavBarSearch.php",
-                    data: dataString,
-                    success: function(data) {
-                        //Escribimos las sugerencias que nos manda la consulta
-                        $('#suggestions').fadeIn(1000).html(data);
-                        //Al hacer click en alguna de las sugerencias
-                        $('.suggest-element').on('click', function(){
-                                var url = $(this).attr('url');
-                                $(location).attr('href',url);
-                                return false;
-                        });
-                    }
-                });
+                type: "POST",
+                url: "/search/suggest",
+                data: dataString,
+                success: function(data) {
+                    $('#suggestions').fadeIn(200).html(data);
+                    $('.suggest-element').on('click', function(){
+                        var url = $(this).attr('url');
+                        window.location.href = url;
+                        return false;
+                    });
+                }
             });
-        }); 
-</script>
+        });
+    }); 
+    </script>
+
     @yield('css')
     @yield('javascript')
 </head>

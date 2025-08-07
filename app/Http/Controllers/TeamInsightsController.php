@@ -99,7 +99,7 @@ class TeamInsightsController extends Controller
 
         $stats = [];
         $stats['Value'] = $value;
-        $stats['Logo'] = $collection[0]['Logo'];
+        $stats['Logo'] = $collection->first()['Logo'] ?? null;
 
         return $stats;
 
