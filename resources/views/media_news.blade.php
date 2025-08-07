@@ -40,7 +40,7 @@ Media News de la liga {{ config('app.name') }}.
                 <td>{{$media->Story}}</td>
             </tr>
             <tr>
-                <td>{{$media->days->DayNumber}}</td>
+                <td>{{ $media->days ? $media->days->DayNumber : $media->Day }}</td>
             </tr>
         </tbody>
     @endforeach

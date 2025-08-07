@@ -125,7 +125,10 @@ Toda la información sobre {{$team->Franchise}} en la liga {{ config('app.name')
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{$transaction->Story}}</li>
             </ul>
-            <div class="dateNews">{{$transaction->days->DayNumber}}</div>
+            <div class="dateNews">
+                {{ $transaction->days ? $transaction->days->DayNumber : $transaction->Day }}
+            </div>
+
         @endforeach
         </div>
         @endif

@@ -3,7 +3,8 @@
 namespace App\Models;
 
 use ErrorException;
-use Goutte\Client;
+use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\BrowserKit\HttpBrowser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
@@ -91,7 +92,7 @@ class Coach extends Model
 
     function getHTMLTeamRoster(){
 
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
 
         if($this->TeamID > 0){
             return $client->request('GET', 

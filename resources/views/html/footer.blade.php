@@ -75,7 +75,7 @@
       </div>
 
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Author: <a class="text-white" href="https://www.linkedin.com/in/jdiaz90/">@jdiaz90</a>
+        Author: <a class="text-white" target="_blank" href="https://www.linkedin.com/in/jdiaz90/">@jdiaz90</a>
       </div>
 
 </footer>

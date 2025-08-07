@@ -5,7 +5,8 @@ namespace App\Models;
 use ErrorException;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Goutte\Client;
+use Symfony\Component\BrowserKit\HttpBrowser;
+use Symfony\Component\HttpClient\HttpClient;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Cache;
 use InvalidArgumentException;
@@ -1008,13 +1009,13 @@ class Player extends Model
     }
 
     function getHTMLPlayer(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/" . $this->UniqueID . ".html");  
     }
 
     function getHTMLTeamRatings(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/" . $this->team->TeamAbbrev . "" 
         . $this->team->TeamName. "_Ratings.html");  
@@ -1022,7 +1023,7 @@ class Player extends Model
 
     function getHTMLTeamRoster(){
 
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
 
         if($this->TeamID <> 0)
             return $client->request('GET', 

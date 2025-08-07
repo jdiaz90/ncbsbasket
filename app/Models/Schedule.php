@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-use Goutte\Client;
+use Symfony\Component\BrowserKit\HttpBrowser;
+use Symfony\Component\HttpClient\HttpClient;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
@@ -31,7 +32,7 @@ class Schedule extends Model
     }
 
     function getHTMLGame(){
-        $client = new Client();
+        $client = new HttpBrowser(HttpClient::create());
         return $client->request('GET', 
         "/html/Game" . $this->GameNo. ".html");  
     }

@@ -13,7 +13,7 @@ Vista previa de la temporada {{ config('app.name') }}.
 <style type="text/css">
 
 .projectedPlayers{
-  background: url('{{$seasonPrev->team->ImgCourt}}'); 
+  background: url('{{strtolower($seasonPrev->team->ImgCourt)}}'); 
   background-position: center -60px; 
   background-repeat: no-repeat; 
   background-size: cover;
